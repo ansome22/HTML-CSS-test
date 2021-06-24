@@ -1,0 +1,207 @@
+.grid {
+	display: -webkit-flex;
+  display: flex;
+}
+.col {
+  padding: 30px;
+}
+.fluid {
+	flex: 1;
+}
+.fill {
+	width: 100%
+}
+
+.center {
+	align-content: center
+}
+
+a{
+	font-family: Quicksand;
+	color: #de6c17;
+	text-decoration: none;
+}
+
+.center-text { text-align: center }
+
+button {
+	font-family: Quicksand;
+	font-size: 1.5rem;
+	border-radius: 4px;
+	background-color: #de6c17;
+	color: white;
+  }
+
+  /* Large screens */
+@media all and (min-width: 800px) {
+	/* We invert order of first sidebar and main
+	 * And tell the main element to take twice as much width as the other two sidebars 
+	 */
+	.main { flex: 2 0px; }
+	.services { order: 1; }
+	.dogs    { order: 2; }
+
+
+	.header-image {
+		background: url(assets/main-banner.png) no-repeat center center fixed;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		height: 40rem;
+	}
+
+	.banner-h1 {
+		font-family: Quicksand;
+		font-size: 1.4rem;
+		font-weight: bold;
+		color: #ffffff;
+	}
+
+
+	.banner-h2 {
+		font-family: Quicksand;
+		font-size: 0.75rem;
+		font-weight: medium;
+		color: #ffffff;
+	}
+
+	h1 {
+		font-family: Quicksand;
+		font-size: 1.4rem;
+		font-weight: bold;
+		color: #36413c;
+	}
+
+	h2 {
+		font-family: Quicksand;
+		font-size: 1.8rem;
+		font-weight: bold;
+		color: #36413c;
+	}
+
+	h3 {
+		font-family: Quicksand;
+		font-size: 1.7rem;
+		font-weight: medium;
+		color: #5e6e66;
+	}
+
+	p {
+		font-family: Quicksand;
+		font-size: 1.5rem;
+		font-weight: medium;
+		color: #5e6e66;
+	}
+	a{
+		font-size: 1.5rem;
+		font-weight: bold;
+	}
+
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 2fr));
+    grid-gap: 40px;
+	padding-left: 150px;
+	padding-right: 150px;
+}
+
+.card {
+    display: grid;
+	border-radius: 4px;
+
+	-webkit-box-shadow: 3px 3px 3px 3px #ccc;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+	-moz-box-shadow:    3px 3px 3px 3px #ccc;  /* Firefox 3.5 - 3.6 */
+	box-shadow:         3px 3px 3px 3px #ccc;
+}
+
+.card img {
+    object-fit: cover;
+	width: 100%;
+	border-radius: 4px;
+    height: 100%;
+}
+
+.card h2 {
+	padding: 10px;
+   }
+.card p {
+ padding-left: 10px;
+ padding-right: 10px;
+}
+
+.card a {
+	padding-left: 10px;
+	padding-right: 10px;
+   }
+
+/* Smaller screens */
+@media all and (min-width: 200px) {
+	/* We tell both sidebars to share a row */
+	.aside { flex: 1 auto; }
+
+	.cards {
+		padding-left: 0px !important;
+		padding-right: 0px !important;
+	}
+
+	.header-image {
+		background: url(assets/main-banner.png) no-repeat center center fixed;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		height: 20rem;
+	}
+
+	.banner-h1 {
+		font-family: Quicksand;
+		font-size: 1.938rem;
+		font-weight: bold;
+		color: #f2f2f2;
+	}
+
+
+	.banner-h2 {
+		font-family: Quicksand;
+		font-size: 1.813rem;
+		font-weight: medium;
+		color: #f2f2f2;
+	}
+
+	h1{
+		font-family: Quicksand;
+		font-size: 1.938rem;
+		text-align: center;
+		font-weight: bold;
+		color: #36413c;
+	}
+
+	h2{
+		font-family: Quicksand;
+		font-size: 1.75rem;
+		font-weight: bold;
+		color: #36413c;
+	}
+
+	h3{
+		font-family: Quicksand;
+		font-size: 1.625rem;
+		font-weight: medium;
+		text-align: center;
+		color: #5e6e66;
+	}
+
+	p{
+		font-family: Quicksand;
+		font-size: 1.75rem;
+		font-weight: medium;
+		color: #5e6e66;
+	}
+	a{
+		font-size: 1.5rem;
+	}
+
+  }
